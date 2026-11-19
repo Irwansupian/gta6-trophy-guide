@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Leonida Trophy Atlas — GTA VI Trophy Guide &amp; Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-text">
+    <h1>Leonida Trophy Atlas</h1>
+    <p class="tagline">The complete Grand Theft Auto VI trophy guide and tracker for PlayStation 5 — all 55 trophies, a staged roadmap to the platinum, missable warnings, and a checklist that saves on this device. Works fully offline.</p>
+  </div>
+  <div class="progress-card" aria-label="Your progress">
+    <p class="progress-big"><span id="earned-count">0</span> of 55 earned · <span id="earned-pct">0%</span></p>
+    <div class="progress-bar"><div id="progress-fill"></div></div>
+    <p class="grade-counts" id="grade-counts"></p>
+  </div>
+</header>
+
+<nav class="tabs" aria-label="Views">
+  <button type="button" data-view="guide" class="tab active">Guide &amp; Tracker</button>
+  <button type="button" data-view="roadmap" class="tab">Roadmap to Platinum</button>
+  <button type="button" data-view="missables" class="tab">Missables</button>
+</nav>
+
+<section class="toolbar" aria-label="Filters and progress tools">
+  <label class="field grow">Search <input id="search" type="search" placeholder="Trophy name or description…"></label>
+  <label class="field">Kind
+    <select id="kind-filter">
+      <option value="all">All kinds</option>
+      <option value="story">Story</option>
+      <option value="missable">Missable</option>
+      <option value="collectibles">Collectibles</option>
+      <option value="activities">Activities</option>
+      <option value="online">Online</option>
+    </select>
+  </label>
+  <label class="field">Grade
+    <select id="grade-filter">
+      <option value="all">All grades</option>
+      <option value="platinum">Platinum</option>
+      <option value="gold">Gold</option>
+      <option value="silver">Silver</option>
+      <option value="bronze">Bronze</option>
+    </select>
+  </label>
+  <label class="check"><input id="only-unearned" type="checkbox"> Only unearned</label>
+  <label class="check" title="Hide the names of story trophies you have not earned yet"><input id="spoiler-toggle" type="checkbox"> Spoiler shield</label>
+  <button id="export-btn" type="button">Export progress</button>
+  <label class="import-btn">Import progress <input id="import-file" type="file" accept="application/json"></label>
+</section>
+
+<main>
+  <section id="view-guide">
+    <div class="layout" id="guide-layout">
+      <ol id="trophy-list" class="trophy-list"></ol>
+      <aside id="detail-panel" class="detail-panel" hidden></aside>
+    </div>
+    <p id="no-results" class="no-results" hidden>No trophies match those filters.</p>
+  </section>
+
+  <section id="view-roadmap" hidden>
+    <p class="view-intro">Four stages stand between a fresh save and the platinum. Play them in order: the campaign first, then the people of Leonida, then the long completion grind, and finally the money-and-mayhem cleanup. Missable warnings are pinned to the top of the stage where they belong.</p>
+    <div id="roadmap-stages"></div>
+  </section>
+
+  <section id="view-missables" hidden>
+    <p class="view-intro">Every trophy this guide flags as missable, with the reason — each flag is built from the trophy's official description, and the guide is conservative: if the description does not support a one-time window, the trophy is not flagged.</p>
+    <div id="missable-list"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Trophy names, descriptions and grades are the official PlayStation list for Grand Theft Auto VI (PS5), as published by Exophase — Grand Theft Auto VI trophies (PS5) and PSNProfiles — Grand Theft Auto VI trophy list. Guides are written for this atlas in its own words and cite those sources per trophy. An unofficial fan guide; not affiliated with the game's publisher.</p>
+</footer>
+
+<script type="module" src="app.js"></script>
+</body>
+</html>
